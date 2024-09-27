@@ -1,0 +1,55 @@
+<!-- Main Toolbar -->
+<mat-toolbar color="primary" class="mat-elevation-z4">
+    <mat-toolbar-row>
+        <!-- Social Media Icons Section -->
+        <div class="social-icons">
+            <!-- GitHub Link with Tooltip -->
+            <a href="https://github.com/fernandomacia" target="_blank" rel="noopener noreferrer" aria-label="Visitar mi GitHub" mat-icon-button matTooltip="Visita mi GitHub">
+                <mat-icon svgIcon="github-mark"></mat-icon>
+            </a>
+            <!-- LinkedIn Link with Tooltip -->
+            <a href="https://linkedin.com/in/developer-ilicitano" target="_blank" rel="noopener noreferrer" aria-label="Visitar mi LinkedIn" mat-icon-button matTooltip="Visita mi LinkedIn">
+                <mat-icon svgIcon="linkedin-mark"></mat-icon>
+            </a>
+            <!-- Email Link with Tooltip -->
+            <a href="mailto:fernando.macia@hotmail.es" aria-label="Enviar un correo electrónico" mat-icon-button matTooltip="Escríbeme un e-mail">
+                <mat-icon>email</mat-icon>
+            </a>
+        </div>
+
+        <!-- Spacer to separate content within the toolbar -->
+        <span class="spacer"></span>
+
+        <!-- Menu Icon Button (Visible on small screens) -->
+        <button mat-icon-button class="menu-icon" (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <!-- Horizontal Navigation Menu (Visible on Large screens) -->
+        <nav class="nav-menu">
+            <a routerLink="/inicio" class="nav-link" aria-label="Ir a la página de Inicio">Inicio</a>
+            <a routerLink="/sobre-mi" class="nav-link" aria-label="Ir a la página Sobre mí">Sobre mí</a>
+            <a routerLink="/proyectos" class="nav-link" aria-label="Ir a la página de Proyectos">Proyectos</a>
+            <a routerLink="/habilidades" class="nav-link" aria-label="Ir a la página de Habilidades">Habilidades</a>
+            <a routerLink="/certificaciones" class="nav-link" aria-label="Ir a la página de Certificaciones">Certificaciones</a>
+            <a routerLink="/contacto" class="nav-link" aria-label="Ir a la página de Contacto">Contacto</a>
+        </nav>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<!-- Sidenav Container for Small Screens -->
+<mat-sidenav-container class="sidenav-container">
+    <!-- Sidenav positioned on the right side of the screen -->
+    <mat-sidenav #sidenav mode="over" position="end" class="sidenav">
+        <!-- Vertical Navigation Menu inside the Sidenav -->
+        <mat-list>
+            <a mat-list-item routerLink="/inicio" (click)="sidenav.close()" aria-label="Ir a la página de Inicio">Inicio</a>
+            <a mat-list-item routerLink="/sobre-mi" (click)="sidenav.close()" aria-label="Ir a la página Sobre mí">Sobre mí</a>
+            <a mat-list-item routerLink="/proyectos" (click)="sidenav.close()" aria-label="Ir a la página de Proyectos">Proyectos</a>
+            <a mat-list-item routerLink="/habilidades" (click)="sidenav.close()" aria-label="Ir a la página de Habilidades">Habilidades</a>
+            <a mat-list-item routerLink="/certificaciones" (click)="sidenav.close()" aria-label="Ir a la página de Certificaciones">Certificaciones</a>
+            <a mat-list-item routerLink="/contacto" (click)="sidenav.close()" aria-label="Ir a la página de Contacto">Contacto</a>
+        </mat-list>
+    </mat-sidenav>
+</mat-sidenav-container>
+

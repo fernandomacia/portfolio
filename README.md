@@ -1,6 +1,6 @@
 # Portfolio
 
-This is a personal portfolio project developed with Angular 17. The purpose of this project is to showcase my professional skills, experience, and projects to potential recruiters or clients. The portfolio is designed to be modern, responsive, and user-friendly.
+This is a personal portfolio project developed with Angular 18. The purpose of this project is to showcase my professional skills, experience, and projects to potential recruiters or clients. The portfolio is designed to be modern, responsive, and user-friendly.
 
 ## Table of Contents
 - [About](#about)
