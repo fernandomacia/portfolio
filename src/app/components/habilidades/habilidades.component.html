@@ -7,13 +7,13 @@
         </p>
 
         <div class="cards-container">
-            <app-card
+            <app-card-skill
                 *ngFor="let category of skillCategories"
                 [title]="category.title"
                 [skills]="category.skills"
                 [skillIcon]="category.skillIcon"
                 [skillIconPath]="category.skillIconPath">
-            </app-card>
+            </app-card-skill>
         </div>
     </div>
 </section>
