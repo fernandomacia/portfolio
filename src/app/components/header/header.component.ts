@@ -1,12 +1,12 @@
-import { Component, inject, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterModule } from '@angular/router';
-import { DomSanitizer } from '@angular/platform-browser';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { IconSVGService } from '../../services/icon-svg.service';
 
 @Component({
     selector: 'app-header',
@@ -31,19 +31,15 @@ export class HeaderComponent {
      * Registers SVG icons for GitHub and LinkedIn using MatIconRegistry.
      * @constructor
      */
-    constructor() {
-        const matIconRegistry = inject(MatIconRegistry);
-        const domSanitizer = inject(DomSanitizer);
+    constructor(private _iconSVGService: IconSVGService) {};
 
-        // Register the GitHub icon for use within the component
-        matIconRegistry.addSvgIcon(
-            'github-mark',
-            domSanitizer.bypassSecurityTrustResourceUrl("icons/github-mark.svg"));
+    ngOnInit(): void {
+        const iconsToRegister = [
+            { name: 'github-mark', path: 'icons/github-mark.svg' },
+            { name: 'linkedin-mark', path: 'icons/linkedin-mark.svg' }
+        ];
 
-        // Register the LinkedIn icon for use within the component
-        matIconRegistry.addSvgIcon(
-            'linkedin-mark',
-            domSanitizer.bypassSecurityTrustResourceUrl("icons/linkedin-mark.svg"));
+        this._iconSVGService.registerIcons(iconsToRegister);
     };
 
     toggleSidenav(): void {

@@ -12,10 +12,8 @@ export class IconSVGService {
         private domSanitizer: DomSanitizer) {}
 
     public registerIcon(name: string, path: string): void {
-        this.matIconRegistry.addSvgIcon(
-          name,
-          this.domSanitizer.bypassSecurityTrustResourceUrl(path)
-        );
+        const sanitizedPath = this.domSanitizer.bypassSecurityTrustResourceUrl(path);
+        this.matIconRegistry.addSvgIcon(name, sanitizedPath);
     }
 
     public registerIcons(icons: { name: string; path: string }[]): void {
