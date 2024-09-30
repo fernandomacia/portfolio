@@ -1,0 +1,23 @@
+<!-- src/app/components/header/header.component.html -->
+
+<div class="header-intro mat-elevation-z4">
+    <div class="content">
+        <div class="profile-teaser">
+            <!-- Profile Image Section -->
+            <div class="profile-image-wrapper">
+                <img class="profile-image" src="profile/profile.jpg" alt="Perfil de Fernando Maciá" />
+            </div>
+
+            <!-- Profile Text Section -->
+            <div class="profile-text">
+                <p class="lead">¡Hola! Mi nombre es</p>
+                <h2 class="name">Fernando Maciá</h2>
+                <p class="bio">
+                    Soy un desarrollador full-stack con mas de 5 años de experiencia en frontend y backend, especializado en crear aplicaciones web escalables y complejas utilizando Angular y Laravel. También tengo formación en Big Data e Inteligencia Artificial, lo que me permite abordar proyectos con una visión integral y analítica. Mi enfoque está en crear soluciones eficientes y bien estructuradas para satisfacer las necesidades de cada proyecto. ¿Te gustaría saber cómo puedo contribuir a tu proyecto? Te invito a revisar algunos de mis <a class="link-on-bg" routerLink="/proyectos">proyectos</a> , las <a class="link-on-bg" routerLink="/habilidades">habilidades</a> que he ido adquiriendo y las
+                    <a class="link-on-bg" routerLink="/certificaciones">certificaciones</a> que me respaldan.
+                </p>
+                <button mat-raised-button class="cta-button" [routerLink]="'/contacto'" aria-label="Ir a la sección de contacto para contratarme">Contrátame</button>
+            </div>
+        </div>
+    </div>
+</div>
