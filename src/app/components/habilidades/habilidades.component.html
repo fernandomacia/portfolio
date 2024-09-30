@@ -1,0 +1,19 @@
+<!-- src/app/components/habilidades/habilidades.component.html -->
+<section class="habilidades-section section">
+    <div class="container">
+        <h3 class="section-title">Resumen de Habilidades</h3>
+        <p class="section-intro">
+            A lo largo de mi carrera profesional he adquirido una sólida base técnica que me permite trabajar con tecnologías frontend y backend, así como gestionar proyectos complejos de principio a fin. Aquí te presento una descripción de mis principales habilidades, agrupadas según la categoría tecnológica, para que puedas conocer mejor las herramientas que manejo y cómo pueden ser útiles para tu proyecto.
+        </p>
+
+        <div class="cards-container">
+            <app-card
+                *ngFor="let category of skillCategories"
+                [title]="category.title"
+                [skills]="category.skills"
+                [skillIcon]="category.skillIcon"
+                [skillIconPath]="category.skillIconPath">
+            </app-card>
+        </div>
+    </div>
+</section>
