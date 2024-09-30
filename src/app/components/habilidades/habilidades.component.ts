@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { CardComponent } from '../card/card.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { CardSkillsComponent } from '../cardSkills/cardSkills.component';
 
 interface SkillCategory {
     title: string;
@@ -13,7 +13,7 @@ interface SkillCategory {
 @Component({
   selector: 'app-habilidades',
   standalone: true,
-  imports: [ CardComponent, MatGridListModule, NgFor ],
+  imports: [ CardSkillsComponent, MatGridListModule, NgFor ],
   templateUrl: './habilidades.component.html',
   styleUrl: './habilidades.component.scss'
 })

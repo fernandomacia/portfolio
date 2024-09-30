@@ -1,21 +1,21 @@
 import { NgFor } from '@angular/common';
-import { Component, inject, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { IconSVGService } from '../../services/icon-svg.service';
 
 @Component({
-  selector: 'app-card',
+  selector: 'app-cardSkills',
   standalone: true,
   imports: [
     MatCardModule,
     MatIconModule,
     NgFor
   ],
-  templateUrl: './card.component.html',
-  styleUrl: './card.component.scss'
+  templateUrl: './cardSkills.component.html',
+  styleUrl: './cardSkills.component.scss'
 })
-export class CardComponent implements OnInit{
+export class CardSkillsComponent implements OnInit{
     @Input() title: string = '';
     @Input() skills: string[] = [];
     @Input() skillIcon: string = '';
