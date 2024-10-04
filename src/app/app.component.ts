@@ -5,6 +5,7 @@ import { HeaderIntroComponent } from './components/header-intro/header-intro.com
 import { HabilidadesComponent } from './components/habilidades/habilidades.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { CardProjectComponent } from './components/card-project/card-project.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @Component({
@@ -16,7 +17,8 @@ import { CardProjectComponent } from './components/card-project/card-project.com
         HeaderIntroComponent,
         HabilidadesComponent,
         ProjectsComponent,
-        CardProjectComponent
+        CardProjectComponent,
+        FooterComponent
     ],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
