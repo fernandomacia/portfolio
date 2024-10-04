@@ -3,6 +3,9 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { HeaderIntroComponent } from './components/header-intro/header-intro.component';
 import { HabilidadesComponent } from './components/habilidades/habilidades.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { CardProjectComponent } from './components/card-project/card-project.component';
+
 
 @Component({
     selector: 'app-root',
@@ -11,7 +14,9 @@ import { HabilidadesComponent } from './components/habilidades/habilidades.compo
         RouterOutlet,
         HeaderComponent,
         HeaderIntroComponent,
-        HabilidadesComponent
+        HabilidadesComponent,
+        ProjectsComponent,
+        CardProjectComponent
     ],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
