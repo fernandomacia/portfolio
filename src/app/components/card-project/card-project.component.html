@@ -1,0 +1,20 @@
+<a [href]="url" target="_blank" rel="noopener noreferrer" class="card-link">
+    <mat-card class="card-project">
+        <div class="card-img-container">
+            <img mat-card-image [src]="imagePath" alt="{{ title }}" class="card-img" />
+
+            <div class="card-overlay">
+                <p class="card-description">{{ description }}</p>
+            </div>
+        </div>
+        <mat-card-title>
+            {{ title }}
+        </mat-card-title>
+        <mat-card-footer>
+            <div class="tech-badges">
+                <span *ngFor="let tech of technologies" class="badge">{{ tech }}</span>
+            </div>
+        </mat-card-footer>
+    </mat-card>
+
+</a>
