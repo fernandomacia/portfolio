@@ -1,12 +1,15 @@
-<h2 class="projects-title">Proyectos Destacados</h2>
-<div class="card-container">
-    <app-card-project
-        *ngFor="let project of projects"
-        [imagePath]="project.imagePath"
-        [title]="project.title"
-        [description]="project.description"
-        [url]="project.url"
-        [technologies]="project.technologies">
-    </app-card-project>
+<div class="main">
+    <h2 class="projects-title">Proyectos Destacados</h2>
+    <div class="card-container">
+        <app-card-project
+            *ngFor="let project of projects"
+            [imagePath]="project.imagePath"
+            [title]="project.title"
+            [description]="project.description"
+            [url]="project.url"
+            [technologies]="project.technologies">
+        </app-card-project>
+    </div>
 </div>
+
 
