@@ -12,13 +12,13 @@ jobs:
     steps:
       # 1. Chequear el código del repositorio
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       # 2. Configurar Node.js en la versión especificada
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4.0.0
         with:
-          node-version: '18'
+          node-version: '20.x'
 
       # 3. Instalar las dependencias de npm
       - name: Install dependencies
@@ -26,12 +26,18 @@ jobs:
 
       # 4. Construir la aplicación Angular
       - name: Build Angular app
-        run: |
-          npm run build -- --output-path=dist/portfolio --base-href="/portfolio/"
+        run: npm run build:prod
 
       # 5. Desplegar en GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.4.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/portfolio
+          # Github access token token used to deploy on gh_pages. You can find it on Github.
+          github_access_token: ${{ secrets.GH_TOKEN }}
+          # base href for the app
+          base_href: /portfolio/
+          # The folder in which `ng build` provides its output. This is the folder which will be deployed to the `deploy_branch`.
+          angular_dist_build_folder: portfolio/browser
+
+
+

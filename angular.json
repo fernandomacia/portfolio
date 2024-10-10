@@ -20,9 +20,10 @@
             "build": {
                 "builder": "@angular-devkit/build-angular:application",
                 "options": {
-                    "outputPath": "dist/portfolio",
+                    "outputPath": "dist/",
                     "index": "src/index.html",
                     "browser": "src/main.ts",
+                    "baseHref": "/production/",
                     "polyfills": [
                         "zone.js",
                         "@angular/localize/init"
@@ -49,19 +50,21 @@
                 },
                 "configurations": {
                     "production": {
-                    "budgets": [
-                        {
-                        "type": "initial",
-                        "maximumWarning": "500kB",
-                        "maximumError": "1MB"
-                        },
-                        {
-                        "type": "anyComponentStyle",
-                        "maximumWarning": "2kB",
-                        "maximumError": "4kB"
-                        }
-                    ],
-                    "outputHashing": "all"
+                        "outputPath": "portfolio",
+                        "baseHref": "/portfolio/",
+                        "budgets": [
+                            {
+                            "type": "initial",
+                            "maximumWarning": "500kB",
+                            "maximumError": "1MB"
+                            },
+                            {
+                            "type": "anyComponentStyle",
+                            "maximumWarning": "2kB",
+                            "maximumError": "4kB"
+                            }
+                        ],
+                        "outputHashing": "all"
                     },
                     "development": {
                     "optimization": false,
