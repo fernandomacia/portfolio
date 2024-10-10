@@ -4,10 +4,16 @@
     background-color: $text-color;
 }
 .projects-title {
-    font-size: 2rem;
     text-align: center;
-    margin: 2rem;
+    padding-top: 2rem;
     color: $primary-color; /* Asegúrate de que $primary-color esté definido */
+}
+
+.section-intro {
+    max-width: 75%;
+    color: $primary-color;
+    margin: 0 auto 2rem;
+    text-align: center;
 }
 
 .card-container {
@@ -15,15 +21,16 @@
     flex-wrap: wrap; /* Permite que las tarjetas se ajusten a la siguiente fila */
     gap: 1rem;
     justify-content: center; /* Centra las tarjetas horizontalmente */
+    padding-bottom: 2rem;
 
     .card-project {
-      flex: 1 1 calc(50% - 1rem); /* Dos tarjetas por fila */
-      max-width: calc(50% - 1rem); /* Ancho máximo */
-      margin-bottom: 1rem;
+        flex: 1 1 calc(50% - 1rem); /* Dos tarjetas por fila */
+        max-width: calc(50% - 1rem); /* Ancho máximo */
+        margin-bottom: 1rem;
 
-      @media (min-width: 1200px) {
-        flex: 1 1 calc(33.33% - 1rem); /* Tres tarjetas por fila en pantallas más grandes */
-        max-width: calc(33.33% - 1rem);
-      }
+        @media (min-width: 1200px) {
+            flex: 1 1 calc(33.33% - 1rem); /* Tres tarjetas por fila en pantallas más grandes */
+            max-width: calc(33.33% - 1rem);
+        }
     }
-  }
+}

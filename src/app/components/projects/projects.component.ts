@@ -34,11 +34,18 @@ export class ProjectsComponent {
             technologies: ['Mongo DB', 'Amazon S3', 'Python', 'Pandas', 'PyTorch', 'Flask', 'Hugging Face', 'HTML/CSS' ]
         },
         {
+            imagePath: 'projects/portfolio-project.png',
+            title: 'Portfolio Personal',
+            description: 'Este portfolio personal muestra mi experiencia profesional, habilidades y proyectos destacados en el desarrollo web. Está diseñado para reflejar mi estilo de trabajo, proporcionando una visión completa de mis capacidades y logros.',
+            url: '#/inicio',
+            technologies: ['Angular 18', 'Angular Material', 'HTML/SCSS', 'GitHub Pages']
+        },
+        {
             imagePath: 'projects/galaxy-weather-project.jpg',
             title: 'Galaxy Weather',
-            description: ' Aplicación de pronóstico del clima que permite consultar el estado del tiempo actual y el pronóstico para cualquier ciudad. Utiliza la API de OpenWeatherMap para obtener los datos meteorológicos en tiempo real.',
+            description: 'Aplicación de pronóstico del clima que permite consultar el estado del tiempo actual y el pronóstico para cualquier ciudad. Utiliza la API de OpenWeatherMap para obtener los datos meteorológicos en tiempo real.',
             url: 'https://github.com/fernandomacia/GalaxyWeather',
-            technologies: ['Vue', 'HTML/CSS', 'OpenWeatherMap API']
+            technologies: ['Vue', 'HTML/CSS', 'Bootstrap', 'OpenWeatherMap API']
         },
         {
             imagePath: 'projects/corel-resizer.jpg',
@@ -49,3 +56,4 @@ export class ProjectsComponent {
         }
     ];
 }
+
