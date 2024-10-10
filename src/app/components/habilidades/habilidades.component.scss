@@ -1,45 +1,44 @@
-// src/app/components/habilidades/habilidades.component.scss
 @import 'colors';
 
 .habilidades-section {
-    width: 100%; // El contenedor principal ocupa todo el ancho de la pantalla
-    background-color: $tertiary-color; // Color de fondo del contenedor
-    padding: 2rem 0; // Espaciado superior e inferior
-    display: flex; // Usar flexbox para alinear el contenido
-    justify-content: center; // Centrar el contenido horizontalmente
+    width: 100%;
+    background-color: $tertiary-color;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
 
     .container {
-        width: 75%; // Contenedor interno con ancho del 80%
-        margin: 0 auto; // Centrado horizontalmente
-        display: flex; // Aplicar flexbox al contenido
-        flex-direction: column; // Colocar los elementos uno debajo de otro
-        align-items: center; // Centrar los elementos dentro del contenedor
+        width: 75%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .section-title {
-        font-size: 2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         color: $primary-color;
+
     }
 
     .section-intro {
         max-width: 75%;
         color: $primary-color;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
 
     .cards-container {
         width: 100%;
-        display: flex; // Activa Flexbox en el contenedor
-        flex-wrap: wrap; // Permite que los elementos se ajusten en filas al reducir la pantalla
-        justify-content: center; // Centra las tarjetas horizontalmente
-        gap: 1.5rem; // Espacio entre las tarjetas
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
         padding: 1rem 0;
 
         app-card {
-          flex: 1 1 300px; // Las tarjetas ocupan al menos 300px y crecen según el espacio
-          max-width: 300px; // Ancho máximo de cada tarjeta
+          flex: 1 1 300px;
+          max-width: 300px;
         }
-      }
-
-  }
+    }
+}
