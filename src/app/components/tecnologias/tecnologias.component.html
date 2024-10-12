@@ -1,0 +1,14 @@
+<div class="tecnologias-container">
+    <div class="title">
+        <h2>Tecnologías</h2>
+        <p class="tecnologias-description">
+            Estas son las principales tecnologías y herramientas con las que he trabajado a lo largo de mi carrera. Estas tecnologías abarcan tanto el desarrollo frontend como backend, así como herramientas para análisis de datos y entornos de desarrollo.
+        </p>
+    </div>
+    <div class="tecnologias-list">
+        <a *ngFor="let tech of iconsToRegister" class="tecnologia-item">
+            <mat-icon [svgIcon]="tech.name"></mat-icon>
+            <div class="tecnologia-name">{{ tech.name }}</div>
+        </a>
+    </div>
+</div>
