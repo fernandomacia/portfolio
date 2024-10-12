@@ -1,0 +1,17 @@
+<div class="certifications-container">
+    <h2>Certificaciones</h2>
+    <p class="certificaciones-description">
+        A lo largo de mi trayectoria profesional, he obtenido diversas certificaciones que avalan mis conocimientos y habilidades en desarrollo de software, análisis de datos y tecnologías cloud. Estas certificaciones reflejan mi compromiso con el aprendizaje continuo y la calidad en los proyectos que desarrollo.
+    </p>
+    <div class="certifications-list">
+        <a *ngFor="let cert of certificaciones"
+            [href]="cert.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            matTooltip="{{ cert.name }}"
+            class="certification-item">
+            <img [src]="cert.logo" [alt]="cert.name" class="certification-logo"/>
+        </a>
+    </div>
+  </div>
+

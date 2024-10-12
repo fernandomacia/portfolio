@@ -1,0 +1,43 @@
+@import 'colors';
+.certifications-container {
+    padding: 2rem;
+    text-align: center;
+    background-color: $secondary-color;
+
+    h2 {
+        color: $text-color;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        width: 75%;
+        margin: auto;
+        color: $text-color;
+        margin-bottom: 2rem;
+    }
+
+    .certifications-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .certification-item {
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+
+        .certification-logo {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+            transform: scale(1.05);
+            }
+        }
+    }
+}
