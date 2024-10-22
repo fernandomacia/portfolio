@@ -6,6 +6,7 @@ import { HabilidadesComponent } from './components/habilidades/habilidades.compo
 import { ProjectsComponent } from './components/projects/projects.component';
 import { CardProjectComponent } from './components/card-project/card-project.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 
 @Component({
@@ -18,7 +19,8 @@ import { FooterComponent } from './components/footer/footer.component';
         HabilidadesComponent,
         ProjectsComponent,
         CardProjectComponent,
-        FooterComponent
+        FooterComponent,
+        ContactFormComponent
     ],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']

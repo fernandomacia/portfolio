@@ -4,6 +4,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { HabilidadesComponent } from './components/habilidades/habilidades.component';
 import { CertificacionesComponent } from './components/certificaciones/certificaciones.component';
 import { CurriculumComponent } from './components/curriculum/curriculum.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 export const routes: Routes = [
     { path: 'inicio', component: InicioComponent },
@@ -11,6 +12,7 @@ export const routes: Routes = [
     { path: 'habilidades', component: HabilidadesComponent},
     { path: 'certificaciones', component: CertificacionesComponent },
     { path: 'curriculum', component: CurriculumComponent },
+    { path: 'contacto', component: ContactFormComponent },
     { path: '', redirectTo: '/inicio', pathMatch: 'full' }
 
 ];

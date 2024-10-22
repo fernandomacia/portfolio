@@ -1,0 +1,47 @@
+<div class="main">
+    <div class="contact-intro">
+        <div class="img-container">
+            <img class="profile-small" src="profile/profile.jpg" alt="Imagen de perfil" />
+        </div>
+
+        <div class="card">
+            <p>
+                Estoy abierto a nuevas propuestas y colaboraciones. Si consideras que mi perfil encaja con lo que buscas, por favor, utiliza el formulario de contacto a continuación. ¿Quieres saber más sobre mi experiencia y qué puedo aportar?  Echa un vistazo a mis <a class="text-link" routerLink="/proyectos">proyectos</a> , <a class="text-link" routerLink="/habilidades">habilidades</a>, y <a class="text-link" routerLink="/certificaciones">certificaciones</a>.
+            </p>
+            <h6>También puedes encontrarme en los siguientes canales:</h6>
+            <div class="social-icons">
+                <a href="https://github.com/fernandomacia" target="_blank" rel="noopener noreferrer" aria-label="Visitar mi GitHub" mat-icon-button matTooltip="Visita mi GitHub"><mat-icon class="github social-icon" [svgIcon]="'github-mark'"></mat-icon></a>
+                <a href="https://linkedin.com/in/developer-ilicitano" target="_blank" rel="noopener noreferrer" aria-label="Visitar mi LinkedIn" mat-icon-button matTooltip="Visita mi LinkedIn"><mat-icon class="linkedin social-icon" [svgIcon]="'linkedin-mark'"></mat-icon></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" id="contact-form">
+            <h3>Contáctame</h3>
+            <div class="row">
+                <mat-form-field appearance="outline" class="mat-form field">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput formControlName="name" type="text"/>
+                    <mat-error>El nombre es obligatorio</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="mat-form field">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" type="email"/>
+                    <mat-error>El email debe ser válido.</mat-error>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline" class="mat-form full-width">
+                    <mat-label>Mensaje</mat-label>
+                    <textarea matInput formControlName="message" rows="5"></textarea>
+                    <mat-error>El mensaje es obligatorio.</mat-error>
+                </mat-form-field>
+            </div>
+
+            <button mat-raised-button color="primary" type="submit" [disabled]="contactForm.invalid">Enviar</button>
+        </form>
+    </div>
+</div>
+

@@ -24,11 +24,22 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # 4. Construir la aplicación Angular
+      # 4. Reemplazar las variables de entorno en environment.ts
+      - name: Replace environment variables
+        run: |
+          sed -i "s/userID: \"\"/userID: \"${SECRET_EMAILJS_USER_ID}\"/" src/environments/environment.ts
+          sed -i "s/serviceID: \"\"/serviceID: \"${SECRET_EMAILJS_SERVICE_ID}\"/" src/environments/environment.ts
+          sed -i "s/templateID: \"\"/templateID: \"${SECRET_EMAILJS_TEMPLATE_ID}\"/" src/environments/environment.ts
+        env:
+          SECRET_EMAILJS_USER_ID: ${{ secrets.SECRET_EMAILJS_USER_ID }}
+          SECRET_EMAILJS_SERVICE_ID: ${{ secrets.SECRET_EMAILJS_SERVICE_ID }}
+          SECRET_EMAILJS_TEMPLATE_ID: ${{ secrets.SECRET_EMAILJS_TEMPLATE_ID }}
+
+      # 5. Construir la aplicación Angular
       - name: Build Angular app
         run: npm run build:prod
 
-      # 5. Desplegar en GitHub Pages
+      # 6. Desplegar en GitHub Pages
       - name: Deploy to GitHub Pages
         uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.4.0
         with:
