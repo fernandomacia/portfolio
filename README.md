@@ -17,7 +17,7 @@ This portfolio is a professional platform where I present my background as a Ful
 
 ## Technologies Used
 - **Frontend**: Angular 18, TypeScript, SCSS
-- **Other**: TSLint, Jasmine, Karma for testing, GitHub Pages for deployment
+- **Other**: TSLint, GitHub Pages & GitHub Actions for deployment
 
 ## License
 
