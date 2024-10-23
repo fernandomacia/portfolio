@@ -37,8 +37,8 @@ export class ProjectsComponent {
             imagePath: 'projects/portfolio-project.png',
             title: 'Portfolio Personal',
             description: 'Este portfolio personal muestra mi experiencia profesional, habilidades y proyectos destacados en el desarrollo web. Está diseñado para reflejar mi estilo de trabajo, proporcionando una visión completa de mis capacidades y logros.',
-            url: '#/inicio',
-            technologies: ['Angular 18', 'Angular Material', 'HTML/SCSS', 'GitHub Pages']
+            url: 'https://github.com/fernandomacia/Portfolio',
+            technologies: ['Angular 18', 'Angular Material', 'HTML/SCSS', 'GitHub Pages', 'GitHub Actions']
         },
         {
             imagePath: 'projects/galaxy-weather-project.jpg',
