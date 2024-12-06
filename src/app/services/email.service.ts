@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmailService {
 
-    private userID = 'ytv4jsjf2pvF8rWt7'; // Reemplaza con tu User ID
-    private serviceID = 'service_lkoo3lj'; // Reemplaza con tu Service ID
-    private templateID = 'template_uzfbooq'; // Reemplaza con tu Template ID
+    private userID = environment.userID
+    private serviceID = environment.serviceID
+    private templateID = environment.templateID
 
     constructor() { }
 
