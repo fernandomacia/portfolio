@@ -9,19 +9,19 @@ declare global {
     }
 }
 
-if (environment.production && environment.googleAnalyticsKey) {
-const script = document.createElement('script');
-script.src = `https://www.googletagmanager.com/gtag/js?id=${environment.googleAnalyticsKey}`;
-script.async = true;
-document.head.appendChild(script);
+if (environment.googleAnalyticsKey) {
+    const script = document.createElement('script');
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${environment.googleAnalyticsKey}`;
+    script.async = true;
+    document.head.appendChild(script);
 
 
-window.dataLayer = window.dataLayer || [];
-function gtag(...args: any) {
-    (window.dataLayer).push(args);
-}
-gtag('js', new Date());
-gtag('config', environment.googleAnalyticsKey);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(...args: any) {
+        (window.dataLayer).push(args);
+    }
+    gtag('js', new Date());
+    gtag('config', environment.googleAnalyticsKey);
 }
 
 bootstrapApplication(AppComponent, appConfig)
