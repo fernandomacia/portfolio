@@ -23,7 +23,7 @@
                     "outputPath": "dist/",
                     "index": "src/index.html",
                     "browser": "src/main.ts",
-                    "baseHref": "/production/",
+                    "baseHref": "/portfolio/",
                     "polyfills": [
                         "zone.js"
                     ],
