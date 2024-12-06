@@ -1,12 +1,15 @@
-# Portfolio
+# Portfolio  [![Deploy Angular Portfolio Application to GitHub Pages](https://github.com/fernandomacia/portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/fernandomacia/portfolio/actions/workflows/deploy.yml)
 
 This is a personal portfolio project developed with Angular 18. The purpose of this project is to showcase my professional skills, experience, and projects to potential recruiters or clients. The portfolio is designed to be modern, responsive, and user-friendly.
 
 ## Table of Contents
-- [About](#about)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [License](#license)
+- [Portfolio  ](#portfolio--)
+  - [Table of Contents](#table-of-contents)
+  - [About](#about)
+  - [Features](#features)
+  - [Technologies Used](#technologies-used)
+  - [License](#license)
+    - [MIT License](#mit-license)
 
 ## About
 This portfolio is a professional platform where I present my background as a Full Stack Developer, focusing on technologies like Angular, Laravel, Machine Learning, Big Data, and AI.
