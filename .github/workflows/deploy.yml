@@ -30,10 +30,12 @@ jobs:
           sed -i "s/userID: \"\"/userID: \"${SECRET_EMAILJS_USER_ID}\"/" src/environments/environment.ts
           sed -i "s/serviceID: \"\"/serviceID: \"${SECRET_EMAILJS_SERVICE_ID}\"/" src/environments/environment.ts
           sed -i "s/templateID: \"\"/templateID: \"${SECRET_EMAILJS_TEMPLATE_ID}\"/" src/environments/environment.ts
+          sed -i "s/googleAnalyticsKey: \"\"/googleAnalyticsKey: \"${SECRET_GOOGLE_ANALYTICS_KEY}\"/" src/environments/environment.ts
         env:
           SECRET_EMAILJS_USER_ID: ${{ secrets.SECRET_EMAILJS_USER_ID }}
           SECRET_EMAILJS_SERVICE_ID: ${{ secrets.SECRET_EMAILJS_SERVICE_ID }}
           SECRET_EMAILJS_TEMPLATE_ID: ${{ secrets.SECRET_EMAILJS_TEMPLATE_ID }}
+          SECRET_GOOGLE_ANALYTICS_KEY: ${{ secrets.SECRET_GOOGLE_ANALYTICS_KEY }}
 
       # 5. Construir la aplicación Angular
       - name: Build Angular app
