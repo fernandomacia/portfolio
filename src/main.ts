@@ -10,18 +10,32 @@ declare global {
 }
 
 if (environment.googleAnalyticsKey) {
+    // Insertar el comentario y los scripts al principio de <head>
+    const headElement = document.head;
+
+    // Crear el comentario fin de script
+    const commentEnd = document.createComment('End Google tag (gtag.js)');
+    headElement.insertBefore(commentEnd, headElement.firstChild);
+
+    // Crear el script con la configuración de Google Analytics
+    const inlineScript = document.createElement('script');
+    inlineScript.text = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${environment.googleAnalyticsKey}');
+    `;
+    headElement.insertBefore(inlineScript, headElement.firstChild);
+
+    // Crear el script para cargar gtag.js
     const script = document.createElement('script');
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${environment.googleAnalyticsKey}`;
     script.async = true;
-    document.head.appendChild(script);
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${environment.googleAnalyticsKey}`;
+    headElement.insertBefore(script, headElement.firstChild);
 
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag(...args: any) {
-        (window.dataLayer).push(args);
-    }
-    gtag('js', new Date());
-    gtag('config', environment.googleAnalyticsKey);
+    // Crear el comentario
+    const comment = document.createComment('Google tag (gtag.js)');
+    headElement.insertBefore(comment, headElement.firstChild);
 }
 
 bootstrapApplication(AppComponent, appConfig)

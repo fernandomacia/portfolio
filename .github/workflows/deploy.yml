@@ -28,14 +28,11 @@ jobs:
       # 4. Reemplazar las variables de entorno en environment.ts
       - name: Replace environment variables
         run: |
-          echo "GOOGLE_ANALYTICS_KEY: ${SECRET_EMAILJS_USER_ID}"
           sed -i "s/userID: ''/userID: '${SECRET_EMAILJS_USER_ID}'/" src/environments/environment.ts
-          echo "GOOGLE_ANALYTICS_KEY: ${SECRET_EMAILJS_SERVICE_ID}"
           sed -i "s/serviceID: ''/serviceID: '${SECRET_EMAILJS_SERVICE_ID}'/" src/environments/environment.ts
-          echo "GOOGLE_ANALYTICS_KEY: ${SECRET_EMAILJS_TEMPLATE_ID}"
           sed -i "s/templateID: ''/templateID: '${SECRET_EMAILJS_TEMPLATE_ID}'/" src/environments/environment.ts
-          echo "GOOGLE_ANALYTICS_KEY: ${SECRET_GOOGLE_ANALYTICS_KEY}"
           sed -i "s/googleAnalyticsKey: ''/googleAnalyticsKey: '${SECRET_GOOGLE_ANALYTICS_KEY}'/" src/environments/environment.ts
+          echo "Updated environment.ts:"
           cat src/environments/environment.ts
         env:
           SECRET_EMAILJS_USER_ID: ${{ secrets.SECRET_EMAILJS_USER_ID }}
@@ -48,9 +45,7 @@ jobs:
 
       # 5. Construir la aplicación Angular
       - name: Build Angular app
-        run: |
-          sed -i "s/googleAnalyticsKey: ''/googleAnalyticsKey: '${{ secrets.SECRET_GOOGLE_ANALYTICS_KEY }}'/" src/environments/environment.ts
-          npm run build:prod
+        run: npm run build:prod
 
       # 6. Desplegar en GitHub Pages
       - name: Deploy to GitHub Pages
